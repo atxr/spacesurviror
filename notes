@@ -1,0 +1,38 @@
+ressources de base
+
+bois (scierie)
+blé (ferme)
+eau (puit)
+______
+resoucres complementaires
+
+pierre (mine de pierre)
+fer    (mine de fer)      -> armes/armures, materieau de construction
+cuivre (mine de cuivre)   -> circuits impr
+pétrole (puit de pétrole) -> carburant
+
+_________
+trucs a construire
+
+fusée
+véhicules 
+arumures armes
+murailles
+tourelles
+
+__________
+gameplay
+
+1 perso, droite/gauche
+2d vue de coté
+ressources sur la map 
+=> recolter a la main
+=> construire des batiments pour automatiser la recolte
+
+enemis qui attaques les zones qui recoltent les ressources et le perso
+seulement la nuit
+se proteger avec armes murailles ...
+
+but : construire la fusée pour s'evader 
+
+IA : extra teerrestre gentils qui troquent des ressources
