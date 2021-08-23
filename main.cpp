@@ -1,9 +1,15 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+  int height = 900;
+  int width = 1800;
+  sf::RenderWindow window(sf::VideoMode(width, height), "sfml-app",
+                          sf::Style::Close);
   sf::CircleShape shape(100.f);
   shape.setFillColor(sf::Color::Green);
+  sf::RectangleShape rect(sf::Vector2f(width, height / 3));
+  rect.setOrigin(sf::Vector2f(0, -2 * height / 3));
+  rect.setFillColor(sf::Color::Blue);
 
   while (window.isOpen()) {
     sf::Event event;
@@ -14,6 +20,7 @@ int main() {
 
     window.clear();
     window.draw(shape);
+    window.draw(rect);
     window.display();
   }
 
