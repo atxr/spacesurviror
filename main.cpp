@@ -4,7 +4,7 @@ int main() {
   int height = 400;
   int width = 800;
   sf::RenderWindow window(sf::VideoMode(width, height), "sfml-app",
-                          sf::Style::Close);
+                          sf::Style::Fullscreen);
 
   sf::CircleShape shape(100.f);
   shape.setFillColor(sf::Color::Green);
