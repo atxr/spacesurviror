@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-  int height = 900;
-  int width = 1800;
+  int height = 400;
+  int width = 800;
   sf::RenderWindow window(sf::VideoMode(width, height), "sfml-app",
                           sf::Style::Close);
+
   sf::CircleShape shape(100.f);
   shape.setFillColor(sf::Color::Green);
   sf::RectangleShape rect(sf::Vector2f(width, height / 3));
@@ -14,8 +15,9 @@ int main() {
   while (window.isOpen()) {
     sf::Event event;
     while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed)
+      if (event.type == sf::Event::Closed) {
         window.close();
+      }
     }
 
     window.clear();
