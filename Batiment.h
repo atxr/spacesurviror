@@ -1,23 +1,22 @@
-#ifndef DEF_BATIMENT
-#define DEF_BATIMENT
+#ifndef BATIMENT_H
+#define BATIMENT_H
 
-#include "Perso.h"
+#include "Bag.h"
 #include <iostream>
 #include <string>
+
+class Perso; // On ne peut pas inclure recursivment Batiment et Perso
 
 class Batiment {
 public:
   Batiment(std::string nom, int nbDegats, int vie);
 
-  void ressourceGenere();
   void recevoireDegats(int nbDegats);
   void attaquer(Perso &cible);
   void amelioration();
   void afficherEtat() const;
 
 private:
-  int m_ressource(int bois, int ble, int eau, int pierre, int fer, int cuivre,
-                  int petrole);
   int m_vie;
   int m_nbDegats;
   std::string m_nom;

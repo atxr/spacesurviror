@@ -10,6 +10,8 @@ public:
 private:
   int wood, food, water;
   int rock, iron, copper, oil;
+
+  // TODO define + for Bags
 };
 
 #endif
