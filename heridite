@@ -1,0 +1,76 @@
+Batiment      ->     Tourelle          Ferme
+
+
+
+class Batiment 
+{
+  public:
+  void ameliorer()
+  {
+    m_level++;    
+  }
+
+  private:
+  int m_level;
+}
+
+class Tourelle(Batiment)
+{
+  public:
+  void attaquer(Perso &cible);
+  void ameliorer()
+  {
+    Batiment::ameliorer();
+    m_degat ++;
+  }
+
+  private:
+  int m_degat;
+}
+
+class Ferme(Batiment)
+{
+  public:
+  void creerRessource(Perso &cible);
+
+  private:
+  int m_nbressource;
+}
+
+hans.creerbati:ment(Tourelle())
+
+
+
+
+
+
+
+
+
+- Batiment
+  - Batiment_ressource
+    - Ferme
+    - Mine
+    - Scierie
+  - Batiment_degat
+    - Tour d'archet
+    - Arbalete
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
