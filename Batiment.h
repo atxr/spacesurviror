@@ -9,7 +9,7 @@ class Perso; // On ne peut pas inclure recursivment Batiment et Perso
 
 class Batiment {
 public:
-  Batiment(std::string nom, int nbDegats, int vie);
+  Batiment(std::string nom);
 
   void recevoireDegats(int nbDegats);
   void attaquer(Perso &cible);

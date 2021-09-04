@@ -9,7 +9,7 @@
 class Batiment_ressource : public Batiment {
 public:
   Batiment_ressource(std::string type);
-  void generer_ressource(); // m_stockage = m_production + m_stockage
+  void generer_ressource();
 
 private:
   Bag *m_stockage;
