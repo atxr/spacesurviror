@@ -3,8 +3,7 @@
 
 using namespace std;
 
-Batiment::Batiment(std::string nom, int nbDegats, int vie)
-    : m_nom(nom), m_nbDegats(nbDegats), m_vie(vie) {}
+Batiment::Batiment(std::string nom) : m_nom(nom) {}
 void Batiment::recevoireDegats(int nbDegats) {
   m_vie -= nbDegats;
   if (m_vie < 0) {

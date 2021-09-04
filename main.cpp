@@ -1,30 +1,25 @@
-#include <SFML/Graphics.hpp>
+#include "Bag.h"
+#include "Batiment.h"
+#include "Batiment_ressource.h"
+#include "Perso.h"
+#include <iostream>
+
+using namespace std;
 
 int main() {
-  int height = 400;
-  int width = 800;
-  sf::RenderWindow window(sf::VideoMode(width, height), "sfml-app",
-                          sf::Style::Fullscreen);
+  Perso alex;
+  Perso hans;
 
-  sf::CircleShape shape(100.f);
-  shape.setFillColor(sf::Color::Green);
-  sf::RectangleShape rect(sf::Vector2f(width, height / 3));
-  rect.setOrigin(sf::Vector2f(0, -2 * height / 3));
-  rect.setFillColor(sf::Color::Blue);
+  Batiment_ressource ferme_de_alex("ferme");
+  Batiment_ressource mine_de_hans("mine");
 
-  while (window.isOpen()) {
-    sf::Event event;
-    while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) {
-        window.close();
-      }
-    }
-
-    window.clear();
-    window.draw(shape);
-    window.draw(rect);
-    window.display();
-  }
+  //  Perso ennemi;
+  //  Batiment_defense tourelle("Tourelle");
+  //
+  //  tourelle.attaquer(&ennemi);
+  //  ennemi.attaquer(&tourelle);
+  //  hans.attaquer(&ennemi);
+  //  ennemi.attaquer(&alex);
 
   return 0;
 }
