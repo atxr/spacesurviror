@@ -20,6 +20,7 @@ public:
   bool build(Building b);
   void gain_xp(int xp);
   void move(float);
+  void recevoireDegats(int nbDegats);
 
 private:
   std::string name;
