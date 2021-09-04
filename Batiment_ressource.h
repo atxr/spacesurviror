@@ -1,6 +1,7 @@
 #ifndef BATIMENT_RESSOURCE_H // include guard
 #define BATIMENT_RESSOURCE_H
 
+#include "Bag.h"
 #include "Batiment.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>

@@ -5,11 +5,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-struct Bag {
-  int wood, food, water;
-  int rock, iron, copper, oil;
-};
-
 class Building {};
 class Weapon {};
 
