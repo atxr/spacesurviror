@@ -27,6 +27,7 @@ private:
   sf::RectangleShape *sprite;
   Bag *bag;
   Weapon *weapon;
+  int m_xp;// A été ajouté par Hans (aller voir Perso.cpp pour comprendre)
 };
 
 #endif /* PERSO_H */
