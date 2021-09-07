@@ -2,14 +2,15 @@
 #define BATIMENT_H
 
 #include "Bag.h"
+#include "Cible.h"
 #include <iostream>
 #include <string>
 
 class Perso; // On ne peut pas inclure recursivment Batiment et Perso
 
-class Batiment {
+class Batiment : public Cible {
 public:
-  Batiment(std::string nom);
+  Batiment(std::string nom, int vie);
 
   void amelioration();
   void afficherEtat() const;

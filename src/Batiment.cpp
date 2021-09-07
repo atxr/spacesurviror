@@ -3,4 +3,4 @@
 
 using namespace std;
 
-Batiment::Batiment(std::string nom) : m_nom(nom) {}
+Batiment::Batiment(std::string nom, int vie) : Cible(vie), m_nom(nom) {}

@@ -1,25 +1,25 @@
 #include "Bag.h"
-#include "Batiment.h"
+#include "Batiment_defense.h"
 #include "Batiment_ressource.h"
-#include "Perso.h"
+#include "Player.h"
+#include "Ennemi.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
-  Perso alex;
-  Perso hans;
+    Player hans("hans", 30);
+    Batiment_ressource mine_de_hans("Mine");
 
-  Batiment_ressource ferme_de_alex("ferme");
-  Batiment_ressource mine_de_hans("mine");
+    Ennemi ennemi("mechant", 20);
+    Batiment_defense tourelle("Tourelle", 15);
+    tourelle.attaquer(ennemi);
+    ennemi.attaquer(tourelle);
+    hans.attaquer(ennemi);
 
-  //  Ennemi ennemi;
-  //  Batiment_defense tourelle("Tourelle");
-  //
-  //  tourelle.attaquer(&ennemi);
-  //  ennemi.attaquer(&tourelle);
-  //  hans.attaquer(&ennemi);
-  //  ennemi.attaquer(&alex);
+    cout << "Ennemi : " << ennemi.get_vie() << endl;
+    cout << "Hans : " << hans.get_vie() << endl;
+    cout << "Tourelle : " << tourelle.get_vie() << endl;
 
   return 0;
 }

@@ -1,8 +1,8 @@
 #include "Batiment_defense.h"
 
-Batiment_defense::Batiment_defense(std::string type) : Batiment(type)
+Batiment_defense::Batiment_defense(std::string type, int vie) : Batiment(type, vie)
  {
-     if type == "Tourelle"
+     if (type == "Tourelle")
      {
          m_nbDegats = 5;
      }

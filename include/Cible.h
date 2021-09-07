@@ -5,6 +5,8 @@
 
 class Cible {
     public:
+    Cible(int vie);
+    int get_vie();
     void recevoirDegats(int nbDegats);
 
     protected:

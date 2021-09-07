@@ -14,7 +14,7 @@ class Weapon;
 class Perso : public Cible {
 public:
     Perso();
-    Perso(std::string name);
+    Perso(std::string name, int vie);
     void move(float);
     void attaquer(Cible &cible);
 
@@ -24,6 +24,7 @@ private:
     Bag *bag;
     int m_xp;// A été ajouté par Hans (aller voir Perso.cpp pour comprendre)
     Weapon *weapon;
+    int m_nbDegats;
 };
 
 #endif /* PERSO_H */

@@ -1,5 +1,7 @@
 #include "Player.h"
 
+Player::Player(std::string nom, int vie) : Perso(nom, vie) {}
+
 void Player::eat(int bonus_health) 
 {
     m_vie += bonus_health;

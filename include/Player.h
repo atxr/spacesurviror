@@ -5,6 +5,7 @@
 
 class Player : public Perso {
 public:
+    Player(std::string, int);
     void eat(int bonus_health);
     bool build(Batiment b);
     void gain_xp(int xp);

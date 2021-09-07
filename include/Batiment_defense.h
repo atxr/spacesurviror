@@ -11,7 +11,7 @@
 class Batiment_defense : public Batiment
 {
     public :
-    Batiment_defense(std::string m_nom);
+    Batiment_defense(std::string m_nom, int vie);
     void attaquer(Cible &cible);
     
 
