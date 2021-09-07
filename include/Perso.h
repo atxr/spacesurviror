@@ -3,34 +3,27 @@
 #define PERSO_H
 
 #include "Bag.h"
-#include <SFML/Graphics.hpp>
+#include "Cible.h"
 #include <iostream>
 
 static int const MAX_VIE = 20;
 
 class Batiment; // On ne peut pas inclure recursivement Batiment et Perso
-class Weapon {};
+class Weapon;
 
-class Perso {
+class Perso : public Cible {
 public:
-  Perso();
-  Perso(std::string name);
-  void eat(int bonus_health);
-  bool build(Batiment b);
-  void gain_xp(int xp);
-  void move(float);
-  void recevoireDegats(int nbDegats);
-  void attaquer(Perso &cible);
+    Perso();
+    Perso(std::string name);
+    void move(float);
+    void attaquer(Cible &cible);
 
 private:
-  std::string m_name;
-  int m_vie;
-  float location;
-  int m_level;
-  sf::RectangleShape *sprite;
-  Bag *bag;
-  Weapon *weapon;
-  int m_xp;// A été ajouté par Hans (aller voir Perso.cpp pour comprendre)
+    std::string m_name;
+    int m_level;
+    Bag *bag;
+    int m_xp;// A été ajouté par Hans (aller voir Perso.cpp pour comprendre)
+    Weapon *weapon;
 };
 
 #endif /* PERSO_H */
