@@ -3,6 +3,7 @@
 
 #include "Bag.h"
 #include "Batiment.h"
+#include "Cible.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
@@ -16,6 +17,6 @@ class Batiment_defense : public Batiment
 
     private :
     int m_nbDegats;
-}
+};
 
 #endif

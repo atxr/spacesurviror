@@ -11,14 +11,10 @@ class Batiment {
 public:
   Batiment(std::string nom);
 
-  void recevoireDegats(int nbDegats);
-  void attaquer(Perso &cible);
   void amelioration();
   void afficherEtat() const;
 
-private:
-  int m_vie;
-  int m_nbDegats;
+protected:
   std::string m_nom;
 };
 

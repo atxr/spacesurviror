@@ -7,7 +7,7 @@ class Cible {
     public:
     void recevoirDegats(int nbDegats);
 
-    private:
+    protected:
     int m_vie;
     float location;
     sf::RectangleShape *sprite;

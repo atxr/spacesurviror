@@ -1,10 +1,8 @@
-#include "Batiment_defense"
+#include "Batiment_defense.h"
 
-Batiment_defense::Batiment_defense(std::string nom) : 
-m_nom(nom)
-{}
+Batiment_defense::Batiment_defense(std::string nom) : Batiment(nom) {}
 
-void attaquer(Cible &cible)
+void Batiment_defense::attaquer(Cible &cible)
 {
-    cible.recevoirDegats(nbDegats);
+    cible.recevoirDegats(m_nbDegats);
 }
