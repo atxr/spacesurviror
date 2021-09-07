@@ -11,7 +11,11 @@ project(
   CXX
 )
 
-find_package(SFML 2 REQUIRED network audio graphics window system)
+# Find SFML shared libraries
+find_package(SFML 2.5 
+  COMPONENTS 
+    system window graphics network audio REQUIRED
+  )
 
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
 add_executable(spacesurvivor ${SRC_FILES})

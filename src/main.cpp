@@ -13,7 +13,7 @@ int main() {
   Batiment_ressource ferme_de_alex("ferme");
   Batiment_ressource mine_de_hans("mine");
 
-  //  Perso ennemi;
+  //  Ennemi ennemi;
   //  Batiment_defense tourelle("Tourelle");
   //
   //  tourelle.attaquer(&ennemi);
