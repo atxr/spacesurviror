@@ -14,7 +14,7 @@ private:
     int m_level;
     Bag *bag;
     int m_xp;// A été ajouté par Hans (aller voir Perso.cpp pour comprendre)
- 
+    int m_speed;
 };
 
 #endif
