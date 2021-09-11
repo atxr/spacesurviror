@@ -9,10 +9,11 @@ class Cible {
     int get_vie();
     void recevoirDegats(int nbDegats);
     bool estVivant();
+    float get_position();
 
     protected:
     int m_vie;
-    float location;
+    float m_position;
     sf::RectangleShape *sprite;
 
 };

@@ -1,6 +1,3 @@
 - Creer class Attaquant pour double heritage (je t'expliquerais)
 - Creer plus de type de Batiments_defense dans le constructeur Batiments_defense
-- lire de la documentation/tuto sur les 'Event' c'est a dire les touches de clavier/souris
-- Mapper les touches du clavier au mouvement du Player
 - Creer une class Map qui decrit la map, ses composants, leur position ??
-- Fonction Ennemi::update() qui etablie le tour de l'ennemi, c'est a dire se rapprocher si aucune Cible à porté, sinon attaquer la plus proche

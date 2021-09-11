@@ -3,10 +3,12 @@
 
 #include "Perso.h"
 
+struct Map;
+
 class Ennemi : public Perso {
     public:
         Ennemi(std::string, int);
-        void update();
+        void update(Map *map);
 };
 
 #endif

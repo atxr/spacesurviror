@@ -9,12 +9,13 @@ public:
     void eat(int bonus_health);
     bool build(Batiment b);
     void gain_xp(int xp);
+    void gestion_clavier();
 
 private:
     int m_level;
     Bag *bag;
     int m_xp;// A été ajouté par Hans (aller voir Perso.cpp pour comprendre)
-    int m_speed;
+    float m_speed;
 };
 
 #endif

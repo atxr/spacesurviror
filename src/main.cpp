@@ -7,19 +7,23 @@
 
 using namespace std;
 
+struct Map {
+    vector<Player*> player;
+    vector<Ennemi*> ennemi;
+    vector<Batiment_defense*> batiment_defense;
+    vector<Batiment_ressource*> batiment_ressource;
+};
+
 int main() {
-    Player hans("hans", 30);
-    Batiment_ressource mine_de_hans("Mine");
+    Map map;
+    map.player.push_back(new Player("hans", 30));
+    map.batiment_ressource.push_back(new Batiment_ressource("Mine"));
+    map.ennemi.push_back(new Ennemi("mechant", 20));
+    map.batiment_defense.push_back(new Batiment_defense("Tourelle", 15));
 
-    Ennemi ennemi("mechant", 20);
-    Batiment_defense tourelle("Tourelle", 15);
-    tourelle.attaquer(ennemi);
-    ennemi.attaquer(tourelle);
-    hans.attaquer(ennemi);
-
-    cout << "Ennemi : " << ennemi.get_vie() << endl;
-    cout << "Hans : " << hans.get_vie() << endl;
-    cout << "Tourelle : " << tourelle.get_vie() << endl;
+    map.batiment_defense[0]->attaquer(*map.ennemi[0]);
+    map.player[0]->attaquer(*map.ennemi[0]);
+    map.ennemi[0]->attaquer(*map.batiment_defense[0]);
 
   return 0;
 }
