@@ -31,14 +31,4 @@ void Player::gestion_clavier(int speed)
     {
         Player.move(-speed , 0);
     }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-    {
-        Player.move(0 , speed);
-    }
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-    {
-        Player.move(0 , -speed);
-    }
 }
