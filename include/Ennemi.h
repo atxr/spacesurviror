@@ -6,6 +6,7 @@
 class Ennemi : public Perso {
     public:
         Ennemi(std::string, int);
+        void update();
 };
 
 #endif

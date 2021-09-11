@@ -8,6 +8,7 @@ class Cible {
     Cible(int vie);
     int get_vie();
     void recevoirDegats(int nbDegats);
+    bool estVivant();
 
     protected:
     int m_vie;
