@@ -20,15 +20,24 @@ void Player::gain_xp(int xp)//Système d'XP
     }
     if (m_level == 1) {};//Bonus selon les levels à regarder ensemble et à revenir plus tard
 } 
-void Player::gestion_clavier()
+void Player::gestion_clavier(sf::Event event)
 {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) || sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    if (event.type == sf::Event::KeyPressed)
     {
-        move(m_speed);
-    }
+        switch (event.key.code)
+        {
+            case(sf::Keyboard::Right):
+            case(sf::Keyboard::D):
+                move(m_speed);
+                break;
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-    {
-        move(-m_speed);
+            case(sf::Keyboard::A):
+            case(sf::Keyboard::Left):
+                move(-m_speed);
+                break;
+
+            default:
+                break;
+        }
     }
 }

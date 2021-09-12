@@ -10,7 +10,7 @@ public:
     void eat(int bonus_health);
     bool build(Batiment b);
     void gain_xp(int xp);
-    void gestion_clavier();
+    void gestion_clavier(sf::Event event);
 
 private:
     int m_level;
