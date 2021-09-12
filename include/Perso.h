@@ -8,7 +8,6 @@
 
 static int const MAX_VIE = 20;
 
-class Batiment; // On ne peut pas inclure recursivement Batiment et Perso
 class Weapon;
 
 class Perso : public Cible {
@@ -16,7 +15,7 @@ public:
     Perso();
     Perso(std::string name, int vie);
     void move(float);
-    void attaquer(Cible &cible);
+    void attaquer(Cible *cible);
 
 private:
     std::string m_name;

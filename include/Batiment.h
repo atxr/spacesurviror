@@ -6,8 +6,6 @@
 #include <iostream>
 #include <string>
 
-class Perso; // On ne peut pas inclure recursivment Batiment et Perso
-
 class Batiment : public Cible {
 public:
   Batiment(std::string nom, int vie);

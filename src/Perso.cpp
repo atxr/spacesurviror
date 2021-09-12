@@ -8,8 +8,8 @@ void Perso::move(float speed)
     m_position += speed;
 }
 
-void Perso::attaquer(Cible &cible)
+void Perso::attaquer(Cible *cible)
 {
-    cible.recevoirDegats(m_nbDegats);
+    cible->recevoirDegats(m_nbDegats);
 }
 

@@ -2,8 +2,10 @@
 #define ENNEMI_H
 
 #include "Perso.h"
+#include "Map.h"
 
-struct Map;
+float const SPEED = 1;
+float const RANGE = 10;
 
 class Ennemi : public Perso {
     public:
