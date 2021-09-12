@@ -6,8 +6,12 @@
 #include <iostream>
 
 #include "Ennemi.h"
+class Ennemi;
 
 struct Map {
+    Map();
+    Map(Player *player);
+
     void add_player(Player *);
     void add_ennemi(Ennemi *);
     void add_batiment(Batiment *);

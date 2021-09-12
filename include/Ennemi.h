@@ -4,6 +4,8 @@
 #include "Perso.h"
 #include "Map.h"
 
+class Map;
+
 float const SPEED = 1;
 float const RANGE = 10;
 

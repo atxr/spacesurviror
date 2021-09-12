@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include "Perso.h"
+#include "Batiment.h"
 
 class Player : public Perso {
 public:
