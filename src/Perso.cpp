@@ -10,6 +10,7 @@ Perso::Perso(std::string name, int vie) :
 void Perso::move(float speed)
 {
     m_position += speed;
+    std::cout << m_position << std::endl;
 }
 
 void Perso::attaquer(Cible *cible)

@@ -19,26 +19,35 @@ int main() {
 
     while (window.isOpen())
     {
+        Player * player = map.get_player();
+
         sf::Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            player->gestion_clavier(event);
+
         }
 
         window.clear();
 
-        map.get_player()->draw(&window);
+        //player->update();
+        player->draw(&window);
+
         vector<Ennemi*> ennemi = map.get_ennemi();
         vector<Batiment*> batiment = map.get_batiment();
 
         for (int i=0; i<ennemi.size(); i++)
         {
+            //ennemi[i]->update();
             ennemi[i]->draw(&window);
         }       
 
         for (int i=0; i<batiment.size(); i++)
         {
+            //batiment[i]->update();
             batiment[i]->draw(&window);
         } 
 

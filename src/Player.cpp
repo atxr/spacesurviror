@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(std::string nom, int vie) : Perso(nom, vie) {
+Player::Player(std::string nom, int vie) : Perso(nom, vie), m_speed(20) {
     sprite->setFillColor(sf::Color::Blue);
 }
 
@@ -30,11 +30,13 @@ void Player::gestion_clavier(sf::Event event)
         {
             case(sf::Keyboard::Right):
             case(sf::Keyboard::D):
+                std::cout << "RIGHT" << std::endl;
                 move(m_speed);
                 break;
 
             case(sf::Keyboard::A):
             case(sf::Keyboard::Left):
+                std::cout << "LEFT" << std::endl;
                 move(-m_speed);
                 break;
 
