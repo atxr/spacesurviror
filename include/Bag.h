@@ -3,26 +3,27 @@
 
 #include <iostream>
 
+int const WOOD = 0;
+int const FOOD = 1;
+int const ROCK = 2;
+int const IRON = 3;
+int const COPPER = 4;
+int const OIL = 5;
+int const BAG_SIZE = 6;
+
 class Bag {
 public:
   Bag();
   Bag(std::string type);
+  const int at(int i);
+  void set(int i, int v);
 
   // Definition de l'operateur + pour la classe Bag
-  Bag operator+(const Bag &b) {
-    Bag bag;
-    bag.wood = this->wood + b.wood;
-    bag.wood = this->food + b.food;
-    bag.wood = this->iron + b.iron;
-    bag.wood = this->rock + b.rock;
-    bag.wood = this->copper + b.copper;
-    bag.wood = this->oil + b.oil;
-    return bag;
-  }
+  Bag add(Bag b);
+  Bag rmv(Bag b);
 
 private:
-  int wood, food, water;
-  int rock, iron, copper, oil;
+  int bag[BAG_SIZE];
 };
 
 #endif

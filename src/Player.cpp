@@ -41,3 +41,26 @@ void Player::gestion_clavier(sf::Event event)
         }
     }
 }
+
+bool Player::buy(Bag price) 
+{
+    bool r = true;
+    for (int i=0; i<BAG_SIZE; i++)
+    {
+        r = r && price.at(i) <= bag->at(i);
+    }
+    if (r) {
+        *bag = bag->rmv(price); 
+    }
+    return r;
+}
+
+bool Player::build(Map *map, Batiment *batiment)
+{
+    bool r = buy(batiment->getPrice());
+    if (r) {
+        map->add_batiment(batiment);
+    }
+
+    return r;
+}

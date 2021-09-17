@@ -9,11 +9,13 @@
 class Batiment : public Cible {
 public:
   Batiment(std::string nom, int vie);
+  Bag getPrice();
 
   void amelioration();
   void afficherEtat() const;
 
 protected:
+  Bag price;
   std::string m_nom;
 };
 

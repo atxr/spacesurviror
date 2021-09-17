@@ -3,14 +3,18 @@
 
 #include "Perso.h"
 #include "Batiment.h"
+#include "Map.h"
+
+class Map;
 
 class Player : public Perso {
 public:
     Player(std::string, int);
     void eat(int bonus_health);
-    bool build(Batiment b);
+    bool build(Map* m, Batiment* b);
     void gain_xp(int xp);
     void gestion_clavier(sf::Event event);
+    bool buy(Bag price);
 
 private:
     int m_level;

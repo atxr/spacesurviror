@@ -1,11 +1,12 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include "Player.h"
 #include "Batiment.h"
 #include <iostream>
 
+#include "Player.h"
 #include "Ennemi.h"
+class Player;
 class Ennemi;
 
 struct Map {

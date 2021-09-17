@@ -4,3 +4,5 @@
 using namespace std;
 
 Batiment::Batiment(std::string nom, int vie) : Cible(vie), m_nom(nom) {}
+
+Bag Batiment::getPrice() { return price; }
