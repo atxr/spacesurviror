@@ -1,6 +1,8 @@
 #include "Player.h"
 
-Player::Player(std::string nom, int vie) : Perso(nom, vie) {}
+Player::Player(std::string nom, int vie) : Perso(nom, vie) {
+    sprite->setFillColor(sf::Color::Blue);
+}
 
 void Player::eat(int bonus_health) 
 {

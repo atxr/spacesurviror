@@ -1,6 +1,6 @@
 #include "Cible.h"
 
-Cible::Cible(int vie) : m_vie(vie) {}
+Cible::Cible(int vie) : m_vie(vie), sprite(new sf::RectangleShape()) {}
 int Cible::get_vie() { return m_vie; }
 float Cible::get_position() { return m_position; }
 void Cible::recevoirDegats(int nbDegats) { m_vie -= nbDegats; }
@@ -15,3 +15,9 @@ bool Cible::estVivant()
         return false;
     }
 }
+
+void Cible::draw(sf::RenderWindow *p_window)
+{
+    p_window->draw(*sprite);
+}
+

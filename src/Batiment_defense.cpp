@@ -5,6 +5,7 @@ Batiment_defense::Batiment_defense(std::string type, int vie) : Batiment(type, v
      if (type == "Tourelle")
      {
          m_nbDegats = 5;
+         sprite->setFillColor(sf::Color::Yellow);
      }
  }
 

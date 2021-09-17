@@ -10,11 +10,12 @@ class Cible {
     void recevoirDegats(int nbDegats);
     bool estVivant();
     float get_position();
+    void draw(sf::RenderWindow*);
 
     protected:
     int m_vie;
     float m_position;
-    sf::RectangleShape *sprite;
+    sf::RectangleShape* sprite;
 
 };
 

@@ -1,6 +1,9 @@
 #include "Ennemi.h"
 
-Ennemi::Ennemi(std::string nom, int vie) : Perso(nom, vie) {}
+Ennemi::Ennemi(std::string nom, int vie) : Perso(nom, vie) {
+    sprite->setFillColor(sf::Color::Red);
+}
+
 void Ennemi::update(Map *map)
 {
     Cible *cible = map->get_closest_ami(get_position());

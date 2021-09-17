@@ -3,6 +3,10 @@
 Map::Map() : Map(new Player("Player", 30)) {}
 Map::Map(Player *player) : m_player(player) {}
 
+Player* Map::get_player() { return m_player; }
+std::vector<Ennemi*> Map::get_ennemi() { return m_ennemi; }
+std::vector<Batiment*> Map::get_batiment() { return m_batiment; }
+
 void Map::add_player(Player *player) { m_player = player; }
 void Map::add_ennemi(Ennemi *ennemi) { m_ennemi.push_back(ennemi); }
 void Map::add_batiment(Batiment *batiment) { m_batiment.push_back(batiment); }
