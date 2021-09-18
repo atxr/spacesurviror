@@ -65,6 +65,5 @@ bool Player::build(Map *map, Batiment *batiment)
     if (r) {
         map->add_batiment(batiment);
     }
-
     return r;
 }
