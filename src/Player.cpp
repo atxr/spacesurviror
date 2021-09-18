@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(std::string nom, int vie) : Perso(nom, vie), m_speed(20) {
+Player::Player(std::string nom, int vie) : Perso(nom, vie), m_speed(20), bag(new Bag()) {
     sprite->setFillColor(sf::Color::Blue);
 }
 
