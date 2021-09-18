@@ -8,7 +8,7 @@
 
 class Batiment_ressource : public Batiment {
 public:
-  Batiment_ressource(std::string type);
+  Batiment_ressource(std::string type, float position);
   void generer_ressource();
 
 private:

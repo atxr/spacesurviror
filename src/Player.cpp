@@ -22,7 +22,7 @@ void Player::gain_xp(int xp)//Système d'XP
     }
     if (m_level == 1) {};//Bonus selon les levels à regarder ensemble et à revenir plus tard
 } 
-void Player::gestion_clavier(sf::Event event)
+void Player::gestion_clavier(sf::Event event, Map *map)
 {
     if (event.type == sf::Event::KeyPressed)
     {
@@ -39,6 +39,11 @@ void Player::gestion_clavier(sf::Event event)
                 std::cout << "LEFT" << std::endl;
                 move(-m_speed);
                 break;
+
+            case(sf::Keyboard::F):
+                std::cout<< "Ferme construite" << std::endl;
+                build(map,new Batiment_ressource("Ferme", getposition()))
+                break;  
 
             default:
                 break;
@@ -61,7 +66,8 @@ bool Player::buy(Bag price)
 
 bool Player::build(Map *map, Batiment *batiment)
 {
-    bool r = buy(batiment->getPrice());
+    bool r = buy(batiment
+    ->getPrice());
     if (r) {
         map->add_batiment(batiment);
     }
