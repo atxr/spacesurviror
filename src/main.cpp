@@ -27,7 +27,7 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            player->update(event);
+            player->update(event, &map);
 
         }
 

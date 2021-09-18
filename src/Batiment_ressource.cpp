@@ -1,8 +1,9 @@
 #include "Batiment_ressource.h"
 
 Batiment_ressource::Batiment_ressource(std::string type, float position)
-    : Batiment(type, 20), m_production(Bag(type)), m_position(position) 
+    : Batiment(type, 20), m_production(Bag(type)) 
 {
+    m_position = position;
     sprite->setFillColor(sf::Color::Green);
 }
 
