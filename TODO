@@ -1,3 +1,17 @@
-- Creer class Attaquant pour double heritage (je t'expliquerais)
-- Creer plus de type de Batiments_defense dans le constructeur Batiments_defense
-- Creer une class Map qui decrit la map, ses composants, leur position ??
++ Gerer update des batiments, production de ressource avec chronometre
+
+- Recuperer les ressources d'un batiement ressource a proximité pour le perso
+Pour ca, boucle sur tout les batiments ressources, recuperer leur position et calculer abs(postition_player - position_batiment) et si la distance est inferieur a portée du joueur alors recuperer ressources du batiment
+
+- Attaquer ennemi le plus proche pendant l'update pour le batiment_defense
+
+- Touche attaquer ennemi le plus proche pour le Player
+
++ Regler les prix, production ressource, vie, ...
+Pour ca mini script python
+
+
+
+
+B      B  P               B              B
+---------------------------------------------
