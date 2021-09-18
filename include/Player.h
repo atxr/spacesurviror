@@ -2,7 +2,8 @@
 #define PLAYER_H
 
 #include "Perso.h"
-#include "Batiment.h"
+#include "Batiment_ressource.h"
+#include "Batiment_defense.h"
 #include "Map.h"
 
 class Map;
@@ -13,7 +14,7 @@ public:
     void eat(int bonus_health);
     bool build(Map* m, Batiment* b);
     void gain_xp(int xp);
-    void update(sf::Event event);
+    void update(sf::Event event, Map* map);
     bool buy(Bag price);
 
 private:

@@ -23,7 +23,7 @@ void Player::gain_xp(int xp)//Système d'XP
     if (m_level == 1) {};//Bonus selon les levels à regarder ensemble et à revenir plus tard
 } 
 
-void Player::update(sf::Event event)
+void Player::update(sf::Event event, Map* map)
 {
     if (event.type == sf::Event::KeyPressed)
     {
@@ -43,7 +43,7 @@ void Player::update(sf::Event event)
 
             case(sf::Keyboard::F):
                 std::cout<< "Ferme construite" << std::endl;
-                build(map,new Batiment_ressource("Ferme", getposition()))
+                build(map, new Batiment_ressource("Ferme", get_position()));
                 break;  
 
             default:

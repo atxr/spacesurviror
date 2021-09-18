@@ -12,7 +12,7 @@ int main() {
 
     Map map;
     map.add_player(new Player("hans", 30));
-    map.add_batiment(new Batiment_ressource("Mine"));
+    map.add_batiment(new Batiment_ressource("Mine", 400));
     map.add_ennemi(new Ennemi("mechant", 20));
     map.add_batiment(new Batiment_defense("Tourelle", 15));
 
