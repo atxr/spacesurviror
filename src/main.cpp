@@ -27,13 +27,12 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            player->gestion_clavier(event);
+            player->update(event);
 
         }
 
         window.clear();
 
-        //player->update();
         player->draw(&window);
 
         vector<Ennemi*> ennemi = map.get_ennemi();

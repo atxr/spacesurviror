@@ -13,7 +13,7 @@ public:
     void eat(int bonus_health);
     bool build(Map* m, Batiment* b);
     void gain_xp(int xp);
-    void gestion_clavier(sf::Event event);
+    void update(sf::Event event);
     bool buy(Bag price);
 
 private:

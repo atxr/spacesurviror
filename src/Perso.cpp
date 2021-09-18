@@ -13,8 +13,3 @@ void Perso::move(float speed)
     std::cout << m_position << std::endl;
 }
 
-void Perso::attaquer(Cible *cible)
-{
-    cible->recevoirDegats(m_nbDegats);
-}
-

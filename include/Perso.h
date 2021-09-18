@@ -4,18 +4,18 @@
 
 #include "Bag.h"
 #include "Cible.h"
+#include "Attaquant.h"
 #include <iostream>
 
 static int const MAX_VIE = 20;
 
 class Weapon;
 
-class Perso : public Cible {
+class Perso : public Cible, public Attaquant {
 public:
     Perso();
     Perso(std::string name, int vie);
     void move(float);
-    void attaquer(Cible *cible);
 
 private:
     std::string m_name;
